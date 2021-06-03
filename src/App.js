@@ -1,4 +1,5 @@
 
+import GameContainer from "./components/GameContainer"
 import Header from "./components/Header"
 import Rules from "./components/Rules"
 import "./style/App.css"
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header/>
       <Rules/>
+      <GameContainer/>
     </div>
   );
 }
