@@ -3,7 +3,6 @@
     flex-direction: column;
     height: 8rem;
     margin-top: 200px;
-    margin: auto;
     border-radius: 15px;
     background-color: rgba(2, 0, 0, 0.253);
     text-align: center;
@@ -20,13 +19,26 @@
         display: flex;
         flex-direction: column;
         height: 8rem;
-        margin-top: 200px;
-        margin: auto;
+        margin-top: 3rem;
         border-radius: 15px;
         background-color: rgba(2, 0, 0, 0.253);
         text-align: center;
-        font-size: 30px;
+        font-size: 2rem;
         color: whitesmoke;
         justify-self: center;
+        word-wrap: normal
+    }
+
+    .rules{
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+        margin-top: 3rem;
+        border-radius: 15px;
+        background-color: rgba(2, 0, 0, 0.253);
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: whitesmoke;
     }
 }
