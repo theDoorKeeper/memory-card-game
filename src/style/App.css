@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Ghibli";
+    src: url(../assets/Ghibli_font.woff);
+}
+
+body{
+    background-image: url(../assets/background.jpeg);
+    background-size:cover;
+    font-family: Ghibli;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+}
