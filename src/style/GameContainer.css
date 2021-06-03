@@ -1,0 +1,41 @@
+.wrapper{
+    margin-top: 5%;
+    width: 50%;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(0, 0, 0, 0.308);
+}
+.card{
+    height: 30rem;
+    width: 20rem;
+    border: red solid 1px;
+    cursor: pointer;
+}
+.card:hover{
+    scale: 1.5;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .wrapper{
+        margin-top: 5%;
+        width: 100%;
+        padding: 2rem;
+        flex-wrap: wrap;
+        gap: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+        background: rgba(0, 0, 0, 0.308);
+    }
+    .card{
+        height: 9rem;
+        width: 5.5rem;
+        border: red solid 1px;
+    }
+}
