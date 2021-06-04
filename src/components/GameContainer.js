@@ -9,7 +9,7 @@ function GameContainer() {
     const refreshId = () =>{
         let  array= [];
        
-        for (let i = 0; i < 6; id.length) {
+        for (let i = 0; i < 6; i++) {
          if(id.length){
             array.length=0;
         }
@@ -18,14 +18,16 @@ function GameContainer() {
          console.log('array',array)
         
          setId(array)
-
    
     }
     useEffect(() => {  
         console.log(id)
-         /* setId(startingArray) */ 
          setCards( id.map(card=> <img key={card.id} id={card.id} src={card.src} className="card" alt="card" /> ) )
       }, [id])
+
+      useEffect(() => {
+        setId(startingArray) 
+      }, [])
 
 
 
