@@ -13,7 +13,7 @@ import img12 from "../assets/pig.jpg"
 import img13 from "../assets/ponyo.jpg"
 import img14 from "../assets/Kamaji.webp"
 
-const imagArray = [
+const imageArray = [
     {
         id : 1 ,
         src : img1 ,
@@ -102,4 +102,4 @@ const startingArray = [
   ]
 
 
-export {imagArray,startingArray}
+export {imageArray,startingArray}

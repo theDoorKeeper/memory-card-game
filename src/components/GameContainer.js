@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../style/GameContainer.css"
-import {imagArray,startingArray }from './imageArray' 
+import {imageArray,startingArray }from './imageArray' 
 function GameContainer() {
 
     const [id,setId] = useState([]);
@@ -13,7 +13,7 @@ function GameContainer() {
          if(id.length){
             array.length=0;
         }
-                array.push (...imagArray.filter( img =>img.id===(Math.floor(Math.random() * (14 - 1 + 1)) + 1) ) )
+                array.push (...imageArray.filter( img =>img.id===(Math.floor(Math.random() * (14 - 1 + 1)) + 1) ) )
          }
          console.log('array',array)
         
