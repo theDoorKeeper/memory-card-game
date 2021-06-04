@@ -21,6 +21,11 @@ function GameContainer() {
 
    
     }
+    useEffect(() => {  
+        console.log(id)
+         /* setId(startingArray) */ 
+         setCards( id.map(card=> <img key={card.id} id={card.id} src={card.src} className="card" alt="card" /> ) )
+      }, [id])
 
 
 
