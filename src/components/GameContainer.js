@@ -1,17 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../style/GameContainer.css"
+import {imagArray,startingArray }from './imageArray' 
 function GameContainer() {
+
+    const [id,setId] = useState([]);
+    const [cards,setCards]=useState([])
+    
+    const refreshId = () =>{
+        let  array= [];
+       
+        for (let i = 0; i < 6; id.length) {
+         if(id.length){
+            array.length=0;
+        }
+                array.push (...imagArray.filter( img =>img.id===(Math.floor(Math.random() * (14 - 1 + 1)) + 1) ) )
+         }
+         console.log('array',array)
+        
+         setId(array)
+
+   
+    }
+
 
 
     return (
-        <div className="wrapper">
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-        </div>
+        <div className="wrapper" onClick={()=>{refreshId()}}> { cards ? cards : null} </div>
+
     )
 }
 
