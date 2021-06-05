@@ -7,8 +7,8 @@ function GameContainer() {
     const [id,setId] = useState([]);
     const [cards,setCards]=useState([])
     
-    const refreshId = () =>{  
-      let  array= [];
+    const refreshId = (e) =>{  
+      if (e.target!==e.currentTarget){let  array= [];
         for (let i = 0; i < 6; i++) {   
           console.log(array)
           let random = randomNumber(14,1);
@@ -16,7 +16,7 @@ function GameContainer() {
               
          }
         
-         setId(array);
+         setId(array);}
          
    
     }
@@ -32,7 +32,7 @@ function GameContainer() {
 
 
     return (
-        <div className="wrapper" onClick={()=>{refreshId()}}> {cards} </div>
+        <div className="wrapper" onClick={(e)=>{refreshId(e)}}> {cards} </div>
 
     )
 }
