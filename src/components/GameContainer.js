@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../style/GameContainer.css"
 import {imageArray,startingArray }from './imageArray' 
 import randomNumber from './randomNumber';
+import Score from './Score';
 function GameContainer() {
     const [cacheArray,setCacheArray]=useState([])
     const [images,setimages] = useState([]);
@@ -23,7 +24,6 @@ function GameContainer() {
       if (e.target!==e.currentTarget){
         let  array= [];
         for (let i = 0; i < 6; i++) {   
-          /* console.log(array) */
           let random = randomNumber(14,1);
                 array.push(...imageArray.filter( img => img.id === random) )
               
@@ -50,7 +50,9 @@ function GameContainer() {
         <div className="wrapper" onClick={(e)=>{
           compareCard(e.target.id);
           addtoGameCache(e);
-          refreshId(e)}}> {cards} score : {score}</div>
+          refreshId(e)}}> {cards}
+          <Score score={score}/>
+          </div>
 
     )
 }
