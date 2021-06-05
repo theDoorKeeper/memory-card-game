@@ -8,10 +8,13 @@ function GameContainer() {
     const [images,setimages] = useState([]);
     const [cards,setCards]=useState([])
     const [score,setScore]=useState(0)
-
+    const [highScore,setHighscore]=useState(0)
 
       const compareCard = (cardID) => {
        if( cacheArray.includes(cardID) ){
+         if ( !highScore || score>highScore){
+           setHighscore(score)
+         }
          setScore(0)
          setCacheArray([])
        }
@@ -51,7 +54,7 @@ function GameContainer() {
           compareCard(e.target.id);
           addtoGameCache(e);
           refreshId(e)}}> {cards}
-          <Score score={score}/>
+          <Score score={score} highScore={highScore}/>
           </div>
 
     )
