@@ -12,6 +12,7 @@ function GameContainer() {
       const compareCard = (cardID) => {
        if( cacheArray.includes(cardID) ){
          setScore(0)
+         setCacheArray([])
        }
        else {
          setScore(prevScore=>prevScore+1)
