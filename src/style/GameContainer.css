@@ -11,11 +11,11 @@
 .card{
     height: 30rem;
     width: 20rem;
-    border: red solid 1px;
+    border-radius: 5px;
     cursor: pointer;
 }
 .card:hover{
-    scale: 1.5;
+    scale: 1.2;
 }
 
 @media only screen 
@@ -34,8 +34,11 @@
         background: rgba(0, 0, 0, 0.308);
     }
     .card{
-        height: 9rem;
-        width: 5.5rem;
-        border: red solid 1px;
+        height: 10rem;
+        width: 6.5rem;
+        border-radius: 5px;
+    }
+    .card:hover{
+        scale: 1.2;
     }
 }
