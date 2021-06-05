@@ -11,14 +11,17 @@ function GameContainer() {
 
       const play = (cardID) => {
        images.forEach(image=>{
-         if(image.id===cardID){
+         if(image.id!==cardID){
            setScore(prevScore=>prevScore+1)
          }
+         else setScore(0)
        })
       }
 
     const refreshId = (e) =>{  
-      if (e.target!==e.currentTarget){let  array= [];
+      if (e.target!==e.currentTarget){
+        let  array= [];
+        play(e.target.id)
         for (let i = 0; i < 6; i++) {   
           console.log(array)
           let random = randomNumber(14,1);
@@ -42,7 +45,7 @@ function GameContainer() {
 
 
     return (
-        <div className="wrapper" onClick={(e)=>{refreshId(e)}}> {cards} </div>
+        <div className="wrapper" onClick={(e)=>{refreshId(e)}}> {cards} score : {score}</div>
 
     )
 }
