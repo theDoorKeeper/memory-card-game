@@ -4,9 +4,19 @@ import {imageArray,startingArray }from './imageArray'
 import randomNumber from './randomNumber';
 function GameContainer() {
   
-    const [id,setId] = useState([]);
+    const [images,setimages] = useState([]);
     const [cards,setCards]=useState([])
-    
+    const [score,setScore]=useState(0)
+
+
+      const play = (cardID) => {
+       images.forEach(image=>{
+         if(image.id===cardID){
+           setScore(prevScore=>prevScore+1)
+         }
+       })
+      }
+
     const refreshId = (e) =>{  
       if (e.target!==e.currentTarget){let  array= [];
         for (let i = 0; i < 6; i++) {   
@@ -16,17 +26,17 @@ function GameContainer() {
               
          }
         
-         setId(array);}
+         setimages(array);}
          
    
     }
     useEffect(() => {  
-         console.log(id) 
-         setCards( id.map(card=> <img key={card.index} id={card.id} src={card.src} className="card" alt="card" /> ) )
-      }, [id])
+         console.log(images) 
+         setCards( images.map(card=> <img key={card.index} id={card.id} src={card.src} className="card" alt="card" /> ) )
+      }, [images])
 
       useEffect(() => {
-        setId(startingArray) 
+        setimages(startingArray) 
       }, [])
 
 
