@@ -3,7 +3,7 @@
     width: 50%;
     padding: 2rem;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     display: flex;
     justify-content: space-evenly;
     background: rgba(0, 0, 0, 0.308);

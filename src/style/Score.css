@@ -1,0 +1,16 @@
+.scoreContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.score{
+    background: rgba(245, 245, 245, 0.247);
+    border-radius: 7px;
+}
+
+.highScore{
+    background: rgba(245, 245, 245, 0.247);
+    border-radius: 7px;
+}
