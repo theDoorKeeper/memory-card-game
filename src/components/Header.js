@@ -1,15 +1,17 @@
-import React from 'react'
-import "../style/Header.css"
-import Logo from "../assets/Logo_Ghibli.svg"
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import '../style/Header.css';
+import Logo from '../assets/Logo_Ghibli.svg';
+
 function Header() {
-    return (
-        <div className="header">
-            <img src={Logo} alt="Ghibli studio logo"/>
-            <div className="tite">
-                Memory card game
-            </div>
-        </div>
-    )
+  return (
+    <div className="header">
+      <img src={Logo} alt="Ghibli studio logo" />
+      <div className="tite">
+        Memory card game
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;
