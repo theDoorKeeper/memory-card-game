@@ -1,6 +1,5 @@
 .scoreContainer{
-    display: flex;
-    flex-direction: row;
+
     gap: 2rem;
     font-size: 2rem;
 }
