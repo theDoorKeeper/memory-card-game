@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/react-in-jsx-scope */
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import GameContainer from './components/GameContainer';
 import Header from './components/Header';
 import Rules from './components/Rules';
@@ -46,10 +47,10 @@ function App() {
   };
 
   const renderCards = () => setCards(images.map((card) => (
-    <div className="card-wrapper">
+    <motion.div className="card-wrapper">
       <img key={card.index} id={card.id} src={card.src} className="card" alt="card" />
       <div className="card-name"> someNAme</div>
-    </div>
+    </motion.div>
   )));
 
   return (
