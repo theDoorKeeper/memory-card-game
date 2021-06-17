@@ -2,8 +2,12 @@
 
 
 body{
-    background-image: url(../assets/ghibli-background.gif);
+    background: url(../assets/ghibli-background.gif) no-repeat center center fixed;
     font-family: 'Cute Font', cursive;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .App{
