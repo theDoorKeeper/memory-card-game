@@ -1,54 +1,23 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-plusplus */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../style/GameContainer.css';
-import { imageArray, startingArray } from './imageArray';
-import randomNumber from './randomNumber';
-import Score from './Score';
 
-function GameContainer() {
-  const [cacheArray, setCacheArray] = useState([]);
-  const [images, setimages] = useState([]);
-  const [cards, setCards] = useState([]);
-  const [score, setScore] = useState(0);
-  const [highScore, setHighscore] = useState(0);
-
-  const compareCard = (cardID) => {
-    if (cacheArray.includes(cardID)) {
-      if (!highScore || score > highScore) {
-        setHighscore(score);
-      }
-      setScore(0);
-      setCacheArray([]);
-    } else {
-      setScore((prevScore) => prevScore + 1);
-    }
-  };
-
-  const refreshId = (e) => {
-    if (e.target !== e.currentTarget) {
-      const array = [];
-      for (let i = 0; i < 6; i++) {
-        const random = randomNumber(14, 1);
-        array.push(...imageArray.filter((img) => img.id === random));
-      }
-
-      setimages(array);
-    }
-  };
-
-  const addtoGameCache = (e) => {
-    setCacheArray((previousArray) => previousArray.concat(e.target.id));
-  };
-  useEffect(() => {
-    /*  console.log(images)  */
-    setCards(images.map((card) => <img key={card.index} id={card.id} src={card.src} className="card" alt="card" />));
-  }, [images]);
+const GameContainer = (props) => {
+  const {
+    renderCards, compareCard, addtoGameCache, refreshId, cards,
+    loadStartingImages,
+  } = props;
 
   useEffect(() => {
-    setimages(startingArray);
+    renderCards();
+  }, [renderCards]);
+
+  useEffect(() => {
+    loadStartingImages();
   }, []);
 
   return (
@@ -62,10 +31,9 @@ function GameContainer() {
       }}
     >
       {cards}
-      <Score score={score} highScore={highScore} />
     </div>
 
   );
-}
+};
 
 export default GameContainer;
