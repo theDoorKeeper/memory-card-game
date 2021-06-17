@@ -7,11 +7,11 @@ import Header from './components/Header';
 import Rules from './components/Rules';
 import Score from './components/Score';
 import './style/App.css';
-import { imageArray, startingArray } from './components/imageArray';
+import { imageArray } from './components/imageArray';
 import randomNumber from './components/randomNumber';
 
 function App() {
-  const [images, setimages] = useState([]);
+  const [images, setImages] = useState([]);
   const [cards, setCards] = useState([]);
   const [score, setScore] = useState(0);
   const [highScore, setHighscore] = useState(0);
@@ -34,14 +34,14 @@ function App() {
   };
 
   const refreshId = (e) => {
-    if (e.target !== e.currentTarget) {
+    if (e.target !== e.currentTarget && e.target.className === ('card')) {
       const array = [];
       for (let i = 0; i < 5; i++) {
         const random = randomNumber(16, 1);
         array.push(...imageArray.filter((img) => img.id === random));
       }
 
-      setimages(array);
+      setImages(array);
     }
   };
 
@@ -51,10 +51,6 @@ function App() {
       <div className="card-name"> someNAme</div>
     </div>
   )));
-
-  const loadStartingImages = () => {
-    setimages(startingArray);
-  };
 
   return (
     <div className="App">
@@ -66,7 +62,7 @@ function App() {
         refreshId={refreshId}
         compareCard={compareCard}
         addtoGameCache={addtoGameCache}
-        loadStartingImages={loadStartingImages}
+        setImages={setImages}
         score={score}
         highScore={highScore}
         cards={cards}
