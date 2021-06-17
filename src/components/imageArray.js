@@ -103,10 +103,6 @@ const startingArray = [
     id: 7,
     src: img7,
   },
-  {
-    id: 11,
-    src: img11,
-  },
 ];
 
 export { imageArray, startingArray };

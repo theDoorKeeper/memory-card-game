@@ -5,6 +5,7 @@ import { useState } from 'react';
 import GameContainer from './components/GameContainer';
 import Header from './components/Header';
 import Rules from './components/Rules';
+import Score from './components/Score';
 import './style/App.css';
 import { imageArray, startingArray } from './components/imageArray';
 import randomNumber from './components/randomNumber';
@@ -35,8 +36,8 @@ function App() {
   const refreshId = (e) => {
     if (e.target !== e.currentTarget) {
       const array = [];
-      for (let i = 0; i < 6; i++) {
-        const random = randomNumber(14, 1);
+      for (let i = 0; i < 5; i++) {
+        const random = randomNumber(16, 1);
         array.push(...imageArray.filter((img) => img.id === random));
       }
 
@@ -59,6 +60,7 @@ function App() {
     <div className="App">
       <Header />
       <Rules />
+      <Score score={score} highScore={highScore} />
       <GameContainer
         renderCards={renderCards}
         refreshId={refreshId}
