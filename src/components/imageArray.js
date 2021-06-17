@@ -1,17 +1,19 @@
-import img1 from '../assets/catbus.png';
-import img2 from '../assets/Haku.jpg';
-import img3 from '../assets/Chihiro_Ogino.webp';
-import img4 from '../assets/Yubaba-0.webp';
-import img5 from '../assets/mononoke.png';
-import img6 from '../assets/noface.webp';
-import img7 from '../assets/Sootballs.webp';
-import img8 from '../assets/totoro.webp';
-import img9 from '../assets/Moro.webp';
-import img10 from '../assets/cat.webp';
-import img11 from '../assets/blonde.jpg';
-import img12 from '../assets/pig.jpg';
-import img13 from '../assets/ponyo.jpg';
-import img14 from '../assets/Kamaji.webp';
+import img1 from '../assets/ghibliOne.webp';
+import img2 from '../assets/ghibliTwo.webp';
+import img3 from '../assets/ghibliThree.webp';
+import img4 from '../assets/ghibliFour.webp';
+import img5 from '../assets/ghibliFive.webp';
+import img6 from '../assets/ghibliSix.webp';
+import img7 from '../assets/ghibliSeven.webp';
+import img8 from '../assets/ghibliEight.webp';
+import img9 from '../assets/ghibliNine.webp';
+import img10 from '../assets/ghibliTen.webp';
+import img11 from '../assets/ghibliEleven.webp';
+import img12 from '../assets/ghibliTwelve.webp';
+import img13 from '../assets/ghibliTherteen.webp';
+import img14 from '../assets/ghibliFourteen.webp';
+import img15 from '../assets/ghibliFifteen.webp';
+import img16 from '../assets/ghibliSixteen.webp';
 
 const imageArray = [
   {
@@ -69,6 +71,14 @@ const imageArray = [
   {
     id: 14,
     src: img14,
+  },
+  {
+    id: 15,
+    src: img15,
+  },
+  {
+    id: 16,
+    src: img16,
   },
 ];
 
