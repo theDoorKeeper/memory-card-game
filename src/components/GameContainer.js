@@ -5,11 +5,12 @@
 /* eslint-disable no-plusplus */
 import React, { useEffect } from 'react';
 import '../style/GameContainer.css';
+import { startingArray } from './imageArray';
 
 const GameContainer = (props) => {
   const {
     renderCards, compareCard, addtoGameCache, refreshId, cards,
-    loadStartingImages,
+    setImages,
   } = props;
 
   useEffect(() => {
@@ -17,8 +18,8 @@ const GameContainer = (props) => {
   }, [renderCards]);
 
   useEffect(() => {
-    loadStartingImages();
-  }, []);
+    setImages(startingArray);
+  }, [setImages]);
 
   return (
 
