@@ -47,8 +47,8 @@ function App() {
   };
 
   const renderCards = () => setCards(images.map((card) => (
-    <motion.div className="card-wrapper">
-      <img key={card.index} id={card.id} src={card.src} className="card" alt="card" />
+    <motion.div whileHover={{ borderColor: '#4688ce', boxShadow: '0 0 15px #4688ce ', rotateX: 25 }} className="card-wrapper">
+      <motion.img key={card.index} id={card.id} src={card.src} className="card" alt="card" animate={{ rotate: 360 }} initial={{ rotate: 0 }} />
       <div className="card-name"> someNAme</div>
     </motion.div>
   )));
