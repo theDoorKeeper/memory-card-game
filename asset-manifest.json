@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/memory-card-game/static/css/main.5586b460.chunk.css",
-    "main.js": "/memory-card-game/static/js/main.24b67ab6.chunk.js",
-    "main.js.map": "/memory-card-game/static/js/main.24b67ab6.chunk.js.map",
+    "main.css": "/memory-card-game/static/css/main.6a4e925e.chunk.css",
+    "main.js": "/memory-card-game/static/js/main.d33d7ea7.chunk.js",
+    "main.js.map": "/memory-card-game/static/js/main.d33d7ea7.chunk.js.map",
     "runtime-main.js": "/memory-card-game/static/js/runtime-main.4b80d8e1.js",
     "runtime-main.js.map": "/memory-card-game/static/js/runtime-main.4b80d8e1.js.map",
     "static/js/2.0dd62082.chunk.js": "/memory-card-game/static/js/2.0dd62082.chunk.js",
     "static/js/2.0dd62082.chunk.js.map": "/memory-card-game/static/js/2.0dd62082.chunk.js.map",
     "index.html": "/memory-card-game/index.html",
-    "static/css/main.5586b460.chunk.css.map": "/memory-card-game/static/css/main.5586b460.chunk.css.map",
+    "static/css/main.6a4e925e.chunk.css.map": "/memory-card-game/static/css/main.6a4e925e.chunk.css.map",
     "static/js/2.0dd62082.chunk.js.LICENSE.txt": "/memory-card-game/static/js/2.0dd62082.chunk.js.LICENSE.txt",
     "static/media/Logo_Ghibli.93d731ed.svg": "/memory-card-game/static/media/Logo_Ghibli.93d731ed.svg",
     "static/media/App.css": "/memory-card-game/static/media/ghibli-background.c2578390.gif",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.4b80d8e1.js",
     "static/js/2.0dd62082.chunk.js",
-    "static/css/main.5586b460.chunk.css",
-    "static/js/main.24b67ab6.chunk.js"
+    "static/css/main.6a4e925e.chunk.css",
+    "static/js/main.d33d7ea7.chunk.js"
   ]
 }
